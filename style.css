@@ -1,3 +1,85 @@
+/* style reset */
+* {
+  margin: 0;
+  padding: 0;
+}
+
 body {
   background-color: darkslateblue;
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 300px 3fr 350px;
+  grid-template-rows: 200px 1fr;
+  grid-template-areas:
+    "dashboard   nav nav"
+    "dashboard   main   info";
+}
+
+
+
+/* dashboard */
+.dashboard {
+  grid-area: dashboard;
+  display: grid;
+  grid-template-rows: auto auto auto 1fr;
+  background-color: rgb(53, 128, 226);
+  color: white;
+  font-size: 1.5em;
+  padding: 1rem;
+  gap: 3rem;
+}
+.title {
+  display: grid;
+  grid-template-columns: auto 1fr;
+}
+.sections,
+.options {
+  list-style: none;
+  padding: 0;
+}
+.dashboard li {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  margin: 0;
+  padding: .25rem;
+}
+img + p {
+  padding-left: 1em;
+}
+
+
+
+/* nav bar */
+.nav {
+  grid-area: nav;
+  display: grid;
+  grid-template: 1fr 1fr / 2fr 1fr;
+}
+
+
+
+/* main content */
+.main {
+  grid-area: main;
+}
+
+
+
+/* info */
+.info {
+  grid-area: info;
+}
+
+
+
+/* temporal scale for placeholders */
+.dashboard [src*="placeholder"] {
+  width: 32px;
+}
+
+/* for testing */
+** {
+  outline: 1px solid green;
 }
