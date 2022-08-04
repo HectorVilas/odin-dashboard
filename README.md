@@ -1,5 +1,10 @@
 # odin-dashboard
 
+## live:
+## https://hectorvilas.github.io/odin-dashboard/
+
+---
+
 Welcome to my new project! This time I'm making a dashboard using a mix of `Grid` and `Flex`. The objective is to replicate this reference image:
 
 ![](./READMEmd/dashboard-project.png)
@@ -17,3 +22,28 @@ First I was messing around, scribbling all over the reference image, but I ended
 There's no need to replicate the image as is. I'm not sure if I'm going to do it, but maybe it would be the best, because in a real job I guess I'll be following the UX/UI team's design instead of making my own.
 
 As always, I'll be updating this README.md file with my progress. I've said in my [previous repository](https://github.com/HectorVilas/odin-form) that I will write everything on spanish (my native language) and english, but that was a lot of unnecesary extra work, so I'll stick with english only, at least for Odin's practice projects.
+
+# progress
+
+## update 1
+I started with the basic boilerplate and made `<body>` a grid container. I don't know why others put a new `<div>` inside `<body>` when `<body>` is there. If I find this is a bad practice, I'll move it's `CSS`' properties to a new `<div>` container.
+
+The first thing I did was dividing the grid in 3 columns and 2 rows, I think this is the minimum necessary for the main layout.
+
+Then I started with the dashboard, the skyblue sidebar at the left. I thought I needed flex items with `display: grid`, but I managed to make it all grid. My approach was using `<ul>` for each section and `<li>` for each item. It also was useful for spacings.
+
+As I didn't had any icons, I made a quick placeholder image in MS-Paint (ugly, but will do for now), so I'm using it each time I want to progress without stopping for icons:
+
+![](./media/icons/placeholder.png)
+
+As I learned in previous lessons, I did this to scale the placeholders:
+
+```css
+.dashboard [src*="placeholder"] {
+  width: 32px;
+}
+```
+
+This way no styling will be applied to the new icons once I replace the image source. I'm planning to make them on InkScape, designing my own icons or trying to replicate the ones in the reference image.
+
+My next step will be the navigation section, the top one. It's already divided, I just need to place the items and I'm planning to use flex on each cell, sounds more appropiate than grid here.
