@@ -47,3 +47,14 @@ As I learned in previous lessons, I did this to scale the placeholders:
 This way no styling will be applied to the new icons once I replace the image source. I'm planning to make them on InkScape, designing my own icons or trying to replicate the ones in the reference image.
 
 My next step will be the navigation section, the top one. It's already divided, I just need to place the items and I'm planning to use flex on each cell, sounds more appropiate than grid here.
+
+## update 2
+I've been working in the navigation (top) and info (right) bars. Nothing special have been done here, just tried to follow the design from the reference image. I thought I would need to use `::before` in some elements, but an `<h2>` was enough, grid took care of this, without extra divs.
+
+There's nothing special to tell about this part. I just applied some `justify-self` and `align-self` in the top bar, nothing new in the rest of the objects. I think I'll need an extra cell to space along the cross axis, or maybe set a max value and let them stop growing in certain point, then `space-evenly`.
+
+The top bar have ugly spacing on widescreen and the side bar will shrink too much on a narrow window. I need to remember to make use of `minmax()` and `clamp()`.
+
+My next step will be the cards in the main section, here I'm planning to use `auto-fill` with `space-evenly`. I don't like how the cards look when they change size dynamically, looks ugly, so I may set with a static width and height, or at least a `minmax()`, then let the spacing between cards be dynamic.
+
+I've been slower than I'm comfortable with, I hope I get faster next time I try to make a website with lots of elements.
