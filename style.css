@@ -1,11 +1,28 @@
+:root {
+  --text-color-1: #fff;
+  --text-color-2: #ddd;
+  --text-color-3: #bbb;
+  --text-color-4: #999;
+  --text-color-5: #777;
+  --text-color-6: #555;
+  --text-color-7: #333;
+  --text-color-8: #111;
+}
+
 /* style reset */
 * {
   margin: 0;
   padding: 0;
 }
 
+@font-face {
+  font-family: roboto;
+  src: url(./media/fonts/Roboto/Roboto-Medium.ttf);
+}
+
 body {
-  background-color: darkslateblue;
+  background-color: rgb(230, 235, 240);
+  font-family: roboto, 'Courier New', Courier, monospace;
   margin: 0;
   padding: 0;
   height: 100vh;
@@ -20,7 +37,7 @@ body {
 
 
 
-/* dashboard */
+/* - - - dashboard - - - */
 .dashboard {
   grid-area: dashboard;
   display: grid;
@@ -52,7 +69,7 @@ img + p {
 
 
 
-/* nav bar */
+/* - - - nav bar - - - */
 .nav {
   grid-area: nav;
   display: grid;
@@ -100,19 +117,55 @@ img + p {
 
 
 
-/* main content */
+/* - - - main content - - - */
 .main {
   grid-area: main;
+  overflow-y: auto;
 }
 
 
 
-/* info */
+/* - - - info - - - */
 .info {
   grid-area: info;
+  display: grid;
+  grid-template-rows: repeat(2, 1fr);
+  overflow-y: auto;
 }
 
+.announcements,
+.trending {
+  margin: 1rem 2rem;
+}
+.announcements > h2,
+.trending > h2 {
+  padding-bottom: 1rem;
+  color: var(--text-color-8);
+}
+.announcements > .messages,
+.trending > ul {
+  background-color: white;
+  border-radius: 1rem;
+  box-shadow: 5px 5px 15px #ccc;
+  padding: 1rem;
+} .announcements > div > div {
+  margin: .5rem 1rem;
+  padding: 1rem 0;
+  /* text-align: justify; */
+} .announcements > div > div:not(:first-child) {
+  border-top: 2px solid #ccc;
+} .announcements p {
+  color: var(--text-color-5);
+}
 
+.trending ul {
+  list-style: none;
+} .trending ul li {
+  padding: 1rem;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 1rem;
+}
 
 /* temporal scale for placeholders */
 [src*="placeholder"] {
