@@ -55,6 +55,12 @@ There's nothing special to tell about this part. I just applied some `justify-se
 
 The top bar have ugly spacing on widescreen and the side bar will shrink too much on a narrow window. I need to remember to make use of `minmax()` and `clamp()`.
 
+This is how the page looks for now:
+
+![](READMEmd/progress01.png)
+
+The font is roboto, from Google Fonts, the same used in the reference image. As the right bar was too tall, I added `overflow-y: auto` to it's `CSS`.
+
 My next step will be the cards in the main section, here I'm planning to use `auto-fill` with `space-evenly`. I don't like how the cards look when they change size dynamically, looks ugly, so I may set with a static width and height, or at least a `minmax()`, then let the spacing between cards be dynamic.
 
 I've been slower than I'm comfortable with, I hope I get faster next time I try to make a website with lots of elements.
