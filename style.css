@@ -7,6 +7,8 @@
   --text-color-6: #555;
   --text-color-7: #333;
   --text-color-8: #111;
+  --color-1: rgb(53, 128, 226);
+  --color-2: rgb(230, 235, 240);
   --box-shadow:5px 5px 15px #ccc;
 }
 
@@ -22,7 +24,7 @@
 }
 
 body {
-  background-color: rgb(230, 235, 240);
+  background-color: var(--color-2);
   font-family: roboto, 'Courier New', Courier, monospace;
   margin: 0;
   padding: 0;
@@ -43,7 +45,7 @@ body {
   grid-area: nav;
   display: grid;
   grid-template-rows: auto auto auto 1fr;
-  background-color: rgb(53, 128, 226);
+  background-color: var(--color-1);
   color: white;
   font-size: 1.5em;
   padding: 1rem;
@@ -64,7 +66,7 @@ body {
   margin: 0;
   padding: .25rem;
 }
-img + p {
+.nav img + p {
   padding-left: 1em;
 }
 
@@ -74,44 +76,69 @@ img + p {
 .header {
   grid-area: header;
   display: grid;
-  grid-template: 1fr 1fr / 2fr 1fr;
+  grid-template: 1fr 1fr / minmax(100px, 500px) 1fr minmax(100px, 350px);
+  grid-template-areas: 
+    "search . user"
+    "greetings . buttons";
   background-color: white;
   padding: 1rem 2rem;
 }
 
 .search {
+  grid-area: search;
   display: grid;
   gap: 1rem;
   /* padding: 1rem; */
   grid-template-columns: auto 1fr;
   align-self: center;
 }
+.search input {
+  border-radius: 1rem;
+  background-color: #eee;
+}
+
 .user {
+  grid-area: user;
   display: grid;
   grid-template-columns: repeat(3, auto);
   gap: 1rem;
   align-self: center;
   justify-self: right;
+  align-items: center;
+  font-size: 1.25em;
 }
+
 .greetings {
+  grid-area: greetings;
   display: grid;
   gap: 1rem;
   justify-self: start;
   align-self: center;
   grid-template-columns: repeat(3, auto);
-  /* padding: 1rem; */
-  
+  font-size: 1.50em;
 } .greetings > div {
   display: flex;
   flex-direction: column;
   justify-content: center;
+} .greetings p:first-child {
+  font-size: 75%;
 }
+
 .header-buttons {
+  grid-area: buttons;
   display: grid;
-  gap: 2rem;
+  gap: 1rem;
   padding: 1rem;
   grid-template-columns: repeat(3, 1fr);
   align-self: center;
+}
+.header button {
+  background-color: var(--color-1);
+  color: var(--text-color-1);
+  padding: .5em;
+  border: none;
+  border-radius: 1rem;
+
 }
 
 
@@ -214,6 +241,6 @@ img + p {
 }
 
 /* for testing */
-** {
+* {
   outline: 1px solid green;
 }
