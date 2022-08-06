@@ -29,7 +29,7 @@ body {
   height: 100vh;
   display: grid;
   /* grid-template-columns: 250px 3fr 1fr; */
-  grid-template-columns: auto 3fr 1fr;
+  grid-template-columns: auto 3fr 350px;
   grid-template-rows: 150px 1fr;
   grid-template-areas:
     "nav   header header"
@@ -122,6 +122,8 @@ img + p {
 .main {
   grid-area: main;
   overflow-y: auto;
+  scrollbar-color: gray darkgray;
+  scrollbar-width: thin;
 }
 
 .cards {
@@ -139,6 +141,16 @@ img + p {
   background-color: white;
   border-radius: 1rem;
   padding: 2rem;
+  position: relative;
+}.card::before{
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: .5rem;
+  border-radius: 1rem 0 0 1rem;
+  background-color: goldenrod;
 }.card > :first-child {
   padding-bottom: .5em;
 }.card > p {
@@ -148,6 +160,7 @@ img + p {
   gap: .5rem;
   padding-left: auto;
   padding-right: 1rem;
+  padding-top: 1rem;
   justify-content: right;
 }
 
@@ -157,6 +170,8 @@ img + p {
   display: grid;
   grid-template-rows: repeat(2, 1fr);
   overflow-y: auto;
+  scrollbar-color: gray darkgray;
+  scrollbar-width: thin;
 }
 
 .announcements,
