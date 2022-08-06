@@ -46,6 +46,8 @@ As I learned in previous lessons, I did this to scale the placeholders:
 
 This way no styling will be applied to the new icons once I replace the image source. I'm planning to make them on InkScape, designing my own icons or trying to replicate the ones in the reference image.
 
+### next steps:
+
 My next step will be the navigation section, the top one. It's already divided, I just need to place the items and I'm planning to use flex on each cell, sounds more appropiate than grid here.
 
 ## update 2
@@ -61,6 +63,31 @@ This is how the page looks for now:
 
 The font is roboto, from Google Fonts, the same used in the reference image. As the right bar was too tall, I added `overflow-y: auto` to it's `CSS`.
 
+### next steps:
+
 My next step will be the cards in the main section, here I'm planning to use `auto-fill` with `space-evenly`. I don't like how the cards look when they change size dynamically, looks ugly, so I may set with a static width and height, or at least a `minmax()`, then let the spacing between cards be dynamic.
 
 I've been slower than I'm comfortable with, I hope I get faster next time I try to make a website with lots of elements.
+
+## update 3
+Today I've been working in the main section. With a little magic, AKA:
+
+```css
+grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+```
+
+I made it dynamic. At first I used a static value, letting the spacing between cards be the dynamic part, but it looked bad. Making the viewport wider or narrower added huge gaps before adding a new column track, so I used the recommended `minmax()` for dynamic cards.
+
+I've also been working in the general styling. The elements in the header bar now have a `minmax()` and an extra empty column in the middle, so the elements will space away instead of getting extra-wide.
+
+I don't remember exactly the rest of the adjustments, so here is a screenshot of how it's going:
+
+![](READMEmd/progress02.png)
+
+### next steps:
+
+Now it's time to draw my own icons with InkScape, I don't want to download free icons (which would be faster for the development), but only because I want to get better with this software.
+
+I also want to try to imagine my own designs, but as I'm not an UX/UI guy, I may just try to replicate those from the reference image.
+
+Once I have the page done, I should start making it (partially) functional. It's not necessary for the practice, I just want it to do something.
