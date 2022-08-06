@@ -31,15 +31,15 @@ body {
   grid-template-columns: auto 3fr 1fr;
   grid-template-rows: 150px 1fr;
   grid-template-areas:
-    "dashboard   nav nav"
-    "dashboard   main   info";
+    "nav   header header"
+    "nav   main   info";
 }
 
 
 
-/* - - - dashboard - - - */
-.dashboard {
-  grid-area: dashboard;
+/* - - - nav - - - */
+.nav {
+  grid-area: nav;
   display: grid;
   grid-template-rows: auto auto auto 1fr;
   background-color: rgb(53, 128, 226);
@@ -57,7 +57,7 @@ body {
   list-style: none;
   padding: 0;
 }
-.dashboard li {
+.nav li {
   display: grid;
   grid-template-columns: auto 1fr;
   margin: 0;
@@ -69,9 +69,9 @@ img + p {
 
 
 
-/* - - - nav bar - - - */
-.nav {
-  grid-area: nav;
+/* - - - header bar - - - */
+.header {
+  grid-area: header;
   display: grid;
   grid-template: 1fr 1fr / 2fr 1fr;
   background-color: white;
@@ -105,7 +105,7 @@ img + p {
   flex-direction: column;
   justify-content: center;
 }
-.nav-buttons {
+.header-buttons {
   display: grid;
   gap: 2rem;
   padding: 1rem;
