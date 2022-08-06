@@ -7,6 +7,7 @@
   --text-color-6: #555;
   --text-color-7: #333;
   --text-color-8: #111;
+  --box-shadow:5px 5px 15px #ccc;
 }
 
 /* style reset */
@@ -123,7 +124,32 @@ img + p {
   overflow-y: auto;
 }
 
-
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  /* grid-template-columns: repeat(auto-fit, 300px); */
+  /* grid-template-rows: repeat(auto-fit, 250px); */
+  /* grid-auto-rows: 250px; */
+  justify-content: space-around;
+  gap: 1rem;
+  padding: 1rem;
+}
+.card {
+  box-shadow: var(--box-shadow);
+  background-color: white;
+  border-radius: 1rem;
+  padding: 2rem;
+}.card > :first-child {
+  padding-bottom: .5em;
+}.card > p {
+  color: var(--text-color-5);
+}.card > .card-buttons {
+  display: flex;
+  gap: .5rem;
+  padding-left: auto;
+  padding-right: 1rem;
+  justify-content: right;
+}
 
 /* - - - info - - - */
 .info {
@@ -146,7 +172,7 @@ img + p {
 .trending > ul {
   background-color: white;
   border-radius: 1rem;
-  box-shadow: 5px 5px 15px #ccc;
+  box-shadow: var(--box-shadow);
   padding: 1rem;
 } .announcements > div > div {
   margin: .5rem 1rem;
