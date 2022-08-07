@@ -91,3 +91,21 @@ Now it's time to draw my own icons with InkScape, I don't want to download free 
 I also want to try to imagine my own designs, but as I'm not an UX/UI guy, I may just try to replicate those from the reference image.
 
 Once I have the page done, I should start making it (partially) functional. It's not necessary for the practice, I just want it to do something.
+
+## update 4
+I've spent 3 hours on InkScape making some vectorial icons. Here is the result:
+
+![](READMEmd/progress03.png)
+
+I made the dark ones first, then inverted most of the fills and outlines for a light theme, but it won't be necessary, as the `CSS`' filter `invert()` does exactly the same job. I could make a dark theme, removing the color inversion, withow the need of extra icons.
+
+After that, I put the icons in the page. It doesn't look professional, but I'm happy to be able to draw my own icons.
+
+![](READMEmd/progress04.png)
+
+I also used the "thumbs up crying cat" meme as avatar, for now.
+
+### next steps:
+The page is almost done. I need to replace the search and Trending's avatars placeholders, then this project is tecnically done.
+
+I should make it responsive, make the sidebar toggleable (hide text, keep icons), make the search functional, toggle dark and light theme, whatever I can come up with, no matter if it's not part of the practice.
