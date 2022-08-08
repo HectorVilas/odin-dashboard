@@ -24,15 +24,11 @@
 }
 
 /* icon/avatar size and color inversion */
-.nav img[src*="icons"],
-.header img[src*="icons"],
-.card img[src*="icons"] {
+img[src*="icons"] {
   width: 32px;
+  /* filter: invert(); */
 }
-.nav img[src*="icons"],
-.header img[src*="icons"] {
-  filter: invert();
-}
+
 img[src*="avatars"] {
   width: 48px;
   border-radius: 50%;
