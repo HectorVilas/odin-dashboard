@@ -109,3 +109,20 @@ I also used the "thumbs up crying cat" meme as avatar, for now.
 The page is almost done. I need to replace the search and Trending's avatars placeholders, then this project is tecnically done.
 
 I should make it responsive, make the sidebar toggleable (hide text, keep icons), make the search functional, toggle dark and light theme, whatever I can come up with, no matter if it's not part of the practice.
+
+## update 5
+Today I decided to replace all the icons with the light mode. It was absurd to have the colors inverted by default. I also added a little button near the top at the right of the navigation bar, to toggle text visibility.
+
+After this I decided it's time to do something about the responsiveness. Now when the viewport is 1500 pixels wider or less, the nav bar will show icons only, and the button to change it's size will be hidden. Once it gets 900 pixels wider or less, the right bar (announcements and trending) will be hidden. I think I screwed up here with the `HTML`/`CSS`, because the way I wrote it, I can't make the right bar to appear at the bottom of the main section. Maybe there's a simple way to achieve it but I'm not seeing it, or maybe I should rearrange some stuff in the `HTML`.
+
+Another little change was replacing the `::before` object in each card with a background gradient. Now the golden border can have any width without modifying the border radius.
+
+Here is a little GIF showing the toggleable nav bar and it's responsiveness:
+![](READMEmd/progress05.gif)
+
+### next steps:
+• try to not hide completely the info bar (the right one) or make it toggleable
+
+• shrink the header, rearranging in 1 row 3 columns
+
+• hide the greeting message ("Hi there, ...") because it's not needed.
