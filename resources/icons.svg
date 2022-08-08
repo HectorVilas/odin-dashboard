@@ -9,7 +9,7 @@
    id="svg5"
    inkscape:version="1.2.1 (9c6d41e410, 2022-07-14)"
    sodipodi:docname="icons.svg"
-   inkscape:export-filename="..\..\..\Desktop\search.png"
+   inkscape:export-filename="..\..\..\Desktop\toggle.png"
    inkscape:export-xdpi="96"
    inkscape:export-ydpi="96"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
@@ -28,9 +28,9 @@
      inkscape:document-units="px"
      showgrid="true"
      units="px"
-     inkscape:zoom="0.39850478"
-     inkscape:cx="-889.57528"
-     inkscape:cy="740.26716"
+     inkscape:zoom="0.28178543"
+     inkscape:cx="-200.50717"
+     inkscape:cy="390.36794"
      inkscape:window-width="1920"
      inkscape:window-height="1027"
      inkscape:window-x="-8"
@@ -898,6 +898,21 @@
          id="path2659-2"
          style="fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:#070707;stroke-width:1.05833;stroke-dasharray:none;stroke-opacity:1"
          d="M 25.572164,3.0028364 A 21.338918,21.338918 0 0 0 4.23333,24.341669 21.338918,21.338918 0 0 0 25.572164,45.680506 21.338918,21.338918 0 0 0 46.911001,24.341669 21.338918,21.338918 0 0 0 25.572164,3.0028364 Z m 0,3.698583 A 17.640173,17.640173 0 0 1 43.212418,24.341669 17.640173,17.640173 0 0 1 25.572164,41.981923 17.640173,17.640173 0 0 1 7.9319129,24.341669 17.640173,17.640173 0 0 1 25.572164,6.7014194 Z" />
+    </g>
+    <g
+       id="g1572"
+       transform="translate(-265.90626)">
+      <circle
+         style="fill:none;fill-rule:evenodd;stroke:none;stroke-width:1.05833"
+         id="path433"
+         cx="33.866661"
+         cy="33.866673"
+         r="31.75" />
+      <path
+         style="fill:#ffffff;fill-opacity:1;stroke:#040404;stroke-width:1.05833;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1"
+         d="M 53.710415,33.86667 25.929164,10.054169 v 7.937501 l 15.875,15.875 -15.875,15.875001 v 7.9375 z"
+         id="path498"
+         sodipodi:nodetypes="ccccccc" />
     </g>
   </g>
 </svg>
