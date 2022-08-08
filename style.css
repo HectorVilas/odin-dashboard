@@ -48,7 +48,8 @@ body {
   display: grid;
   /* grid-template-columns: 250px 3fr 1fr; */
   grid-template-columns: auto 3fr 350px;
-  grid-template-rows: 150px 1fr;
+  /* grid-template-rows: 150px 1fr; */
+  grid-template-rows: auto 1fr;
   grid-template-areas:
     "nav   header header"
     "nav   main   info";
@@ -136,6 +137,7 @@ body {
   border-radius: 1rem;
   background-color: var(--color-2);
   border: none;
+  padding: 0 .75rem;
 }
 
 .user {
@@ -292,6 +294,26 @@ body {
 }
 
 
+/* responsiveness */
+@media screen and (max-width: 1500px){
+  .nav {
+    width: var(--default-icon-size);
+  }
+  .nav .toggle,
+  .nav p {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  body {
+    grid-template-rows: auto 1fr 0fr;
+    grid-template-areas:
+    "nav   header header"
+    "nav   main   main"
+    "nav   info   info";
+  }
+}
 
 /* for testing */
 ** {
