@@ -126,3 +126,18 @@ Here is a little GIF showing the toggleable nav bar and it's responsiveness:
 • shrink the header, rearranging in 1 row 3 columns
 
 • hide the greeting message ("Hi there, ...") because it's not needed.
+
+## update 6
+Today I added the missing images (I just searched for cat memes), now all placeholders are replaced.
+
+I've also been working in the responsiveness. Now the page can be used with a 400% zoom, or with a really small size:
+
+![](READMEmd/progress06.gif)
+
+Of course, it is possible just because the page is not functional. There's no options, no prompts, no nothing, just the page and it's contents in place, because that's the practice and nothing else.
+
+### next steps:
+
+I wanted to make the search bar functional, but I would need actual text for the cards. I'll leave it alone, I know how to make it functional with or without regEx. The next time will be.
+
+I want to try to make a dark theme. Place a button somewhere to change the page colors and apply `invert()` to icons.
