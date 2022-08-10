@@ -10,8 +10,33 @@
   --color-1: rgb(53, 128, 226);
   --color-1-darker: rgb(29, 103, 201);
   --color-2: rgb(230, 235, 240);
-  --box-shadow:5px 5px 15px #ccc;
+  --color-3: white;
+  --box-shadow-1: 5px 5px 15px #ccc;
+  --box-shadow-1-active: 5px 5px 10px #bbb;
+  --box-shadow-2: 0 0 1rem #aaa;
   --default-icon-size: 32px;
+  --background-card: linear-gradient(to right, goldenrod 10px, white 10px, white);
+  --scrollbar-color: gray darkgray;
+}
+:root.dark {
+  --text-color-8: #fff;
+  --text-color-7: #ddd;
+  --text-color-6: #bbb;
+  --text-color-5: #999;
+  --text-color-4: #777;
+  --text-color-3: #555;
+  --text-color-2: #333;
+  --text-color-1: #111;
+  --color-1: rgb(44, 101, 175);
+  --color-1-darker: rgb(27, 89, 172);
+  --color-2: rgb(49, 51, 53);
+  --color-3: #555;
+  --box-shadow-1: 5px 5px 15px #333;
+  --box-shadow-1-active: 5px 5px 10px #222;
+  --box-shadow-2: 0 0 1rem #222;
+  --default-icon-size: 32px;
+  --background-card: linear-gradient(to right, goldenrod 10px, #222 10px, #222);
+  --scrollbar-color: #888 #444;
 }
 
 @font-face {
@@ -28,6 +53,8 @@
 /* icons/avatars size */
 img[src*="icons"] {
   width: var(--default-icon-size);
+} img[src*="icons"].dark {
+  filter: invert();
 }
 
 img[src*="avatars"] {
@@ -65,10 +92,11 @@ body {
   position: relative;
   grid-template-rows: auto auto auto 1fr;
   background-color: var(--color-1);
-  color: white;
+  color: var(--color-3);
   font-size: 1.5em;
   padding: 1rem;
   gap: 3rem;
+  color: var(--text-color-1);
 }
 .title {
   display: grid;
@@ -100,14 +128,15 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  /* z-index: 1; */
+  z-index: 1;
   transition: transform 250ms;
 }
 .rotated {
   transform: rotate(180deg);
 }
 .small-bar {
-  width: var(--default-icon-size);
+  /* width: var(--default-icon-size); */
+  font-size: 0;
 }
 
 
@@ -120,10 +149,12 @@ body {
   grid-template-areas: 
     "search . user"
     "greetings . buttons";
-  background-color: white;
+  background-color: var(--color-3);
   padding: 1rem 2rem;
   margin-bottom: 1rem;
-  box-shadow: 0 0 1rem #aaa;
+  box-shadow: var(--box-shadow-2);
+  position: relative;
+  color: var(--text-color-8);
 }
 
 .search {
@@ -179,12 +210,30 @@ body {
 .header button {
   background-color: var(--color-1);
   color: var(--text-color-1);
+  font-weight: 800;
   padding: .5em;
   border: none;
   border-radius: 1rem;
 
 }
 
+.chain {
+  position: absolute;
+  display: flex;
+  left: 5px;
+  top: -50px;
+  height: 100px;
+  z-index: 2;
+  transition: ease-in 150ms;
+} .chain img {
+  width: auto;
+}
+.chain:hover {
+  top: -40px
+} .chain:active {
+  transition: ease-out 100ms;
+  top: -10px;
+}
 
 
 
@@ -193,11 +242,12 @@ body {
 .main {
   grid-area: main;
   overflow-y: auto;
-  scrollbar-color: gray darkgray;
+  scrollbar-color: var(--scrollbar-color);
   scrollbar-width: thin;
 }
 .main > :first-child {
   padding-left: 1rem;
+  color: var(--text-color-8);
 }
 
 .cards {
@@ -211,14 +261,15 @@ body {
   padding: 1rem;
 }
 .card {
-  box-shadow: var(--box-shadow);
-  background: linear-gradient(to right, goldenrod 10px, white 10px, white);
+  box-shadow: var(--box-shadow-1);
+  background: var(--background-card);
   border-radius: .5rem;
   padding: 2rem;
   position: relative;
   transition: transform 250ms, box-shadow 250ms;
 }.card > :first-child {
   padding-bottom: .5em;
+  color: var(--text-color-8);
 }.card > p {
   color: var(--text-color-5);
 }.card > .card-buttons {
@@ -233,7 +284,7 @@ body {
 .card:hover,
 .card:active {
   transform: translateY(-.25rem);
-  box-shadow: 5px 5px 10px #bbb;
+  box-shadow: var(--box-shadow-1-active);
 }
 
 /* - - - info - - - */
@@ -242,38 +293,45 @@ body {
   display: grid;
   grid-template-rows: repeat(2, 1fr);
   overflow-y: auto;
-  scrollbar-color: gray darkgray;
+  scrollbar-color: var(--scrollbar-color);
   scrollbar-width: thin;
 }
 
 .announcements,
-.trending {
+.staff {
   margin: 1rem 2rem;
 }
 .announcements > h2,
-.trending > h2 {
+.staff > h2 {
   padding-bottom: 1rem;
   color: var(--text-color-8);
+} .staff p {
+  color: var(--text-color-7);
+} .staff p:last-of-type {
+  color: var(--text-color-5);
+}
+.announcements h3 {
+  color: var(--text-color-7);
 }
 .announcements > .messages,
-.trending > ul {
-  background-color: white;
+.staff > ul {
+  background-color: var(--color-3);
   border-radius: 1rem;
-  box-shadow: var(--box-shadow);
+  box-shadow: var(--box-shadow-1);
   padding: 1rem;
 } .announcements > div > div {
   margin: .5rem 1rem;
   padding: 1rem 0;
   /* text-align: justify; */
 } .announcements > div > div:not(:first-child) {
-  border-top: 2px solid #ccc;
+  border-top: 2px solid var(--color-2);
 } .announcements p {
   color: var(--text-color-5);
 }
 
-.trending ul {
+.staff ul {
   list-style: none;
-} .trending ul li {
+} .staff ul li {
   padding: 1rem;
   display: grid;
   grid-template-columns: auto 1fr;
