@@ -7,6 +7,7 @@ const //navigation bar related
   navWidthToggle = document.querySelector(".nav > .toggle");
 const // light-dark theme related
   root = document.querySelector(":root"),
+  switchSound = document.querySelector(".light-sound"),
   chain = document.querySelector(".chain");
 
 
@@ -32,6 +33,8 @@ function toggleNavBar(){
 function toggleTheme(){
   root.classList.toggle("dark");
   icons.forEach(icon => icon.classList.toggle("dark"));
+  switchSound.currentTime = 0;
+  switchSound.play();
 };
 
 
