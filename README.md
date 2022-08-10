@@ -141,3 +141,25 @@ Of course, it is possible just because the page is not functional. There's no op
 I wanted to make the search bar functional, but I would need actual text for the cards. I'll leave it alone, I know how to make it functional with or without regEx. The next time will be.
 
 I want to try to make a dark theme. Place a button somewhere to change the page colors and apply `invert()` to icons.
+
+## update 7
+I added a button (a light switch chain icon) to toggle between dark and light theme. I moved all the colors to "global" variables, inside `:root`, then duplicated `:root` and added the "dark" class. In this class I adjusted all the colors to make them change to a darker version.
+
+I also added the same class to all the icons, to make them look like a dark theme design.
+
+![](READMEmd/progress07.gif)
+
+## credits
+The light switch chain have a [switch sound](https://freesound.org/people/kwahmah_02/sounds/244923/) made by [kwahmah_02](https://freesound.org/people/kwahmah_02/) on freesound.org
+
+### next steps:
+None, I'm spending too much time in each practice, trying to make it nicer. I know this is a terrible thing to say; I learn from it, but at the same time I'm not advancing in the course. After this, there's 44 `JavaScript` lessons and I can't wait to learn more from this language, because this is my favorite part of frontend.
+
+# final thoughts
+This project took me less than I though, but learned a lot. I started pretty slow but got a grip really fast and I'm happy for it. Grid is a powerful tool, makes a lot of things easier, but still requires some planification, so the responsiveness can be more malleable.
+
+I also learned a little more from InkScape. I want to keep using it instead of downloading icons. I also think this is a powerful tool, considering how much can be done with a raw SVG inside the `HTML`.
+
+The dark theme thing was something I've read somewhere, adding a class to `:root` so the variables can change values on everything. It was pretty easy to make, so in my next project I'm keeping all the color values in variables.
+
+I think that's it. Looks like I didn't learned a lot of things, but those few are very valuable.
